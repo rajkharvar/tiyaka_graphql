@@ -4,11 +4,22 @@
   "description": "A chat App for fun",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node bin/dev",
+    "build": "mkdir dist && babel src -s -d dist",
+    "dev": "nodemon --exec npm run babel-node -- ./index.js",
+    "lint": "eslint"
   },
   "keywords": [
     "tiyaka"
   ],
   "author": "Anshu",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0"
+  }
 }
