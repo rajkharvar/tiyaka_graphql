@@ -4,9 +4,9 @@
   "description": "A chat App for fun",
   "main": "index.js",
   "scripts": {
-    "start": "node bin/www",
+    "serve": "node bin/www",
     "build": "mkdir dist && babel src -s -d dist",
-    "dev": "nodemon --exec npm run babel-node -- ./index.js",
+    "start": "./node_modules/.bin/nodemon --exec babel-node -- ./src/index.js",
     "lint": "./node_modules/.bin/eslint ."
   },
   "keywords": [
@@ -24,6 +24,10 @@
     "babel-register": "^6.26.0",
     "eslint": "^6.4.0",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2"
+    "eslint-plugin-import": "^2.18.2",
+    "nodemon": "^1.19.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
