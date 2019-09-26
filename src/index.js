@@ -1,7 +1,4 @@
-import express from 'express'
+import app from './app'
+import { PORT } from './config'
 
-const app = express()
-
-app.use('/', (req, res) => res.send('hello world'))
-const port = process.env.PORT || 3000
-app.listen(3000, () => console.log(`Magic Happens at port ${port}`))
+app.listen(PORT, () => console.log(`Magic Happends at port ${PORT}`))
