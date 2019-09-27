@@ -1,1 +1,1 @@
-<h1> Tiyaka Backend Server Graph Ql </h1>
+<h1> Tiyaka Backend Server Graph QL </h1>
