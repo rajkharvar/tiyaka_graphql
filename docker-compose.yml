@@ -10,14 +10,13 @@ services:
      - /app/node_modules
     restart: always
     depends_on:
-     - mongo
+      - mongo
     links:
      - mongo
     environment:
      - MONGO_URL=mongodb://root:root@mongo/myapp?authSource=admin
      - PORT=3000
   mongo:
-    container_name: mongo
     image: mongo:4
     command: [--auth]
     environment:
